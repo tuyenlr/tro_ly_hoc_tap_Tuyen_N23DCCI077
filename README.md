@@ -4,34 +4,10 @@ MSSV: N23DCCI077
 Lớp: D23CQCI01-N
 
 # 🎙️ Hệ Thống Nhận Dạng Từ Khóa Giọng Nói (Keyword Spotting - KWS)
-
 Dự án nhận dạng từ khóa giọng nói phục vụ điều khiển trợ lý học tập bằng giọng nói, được thiết kế và huấn luyện trên nền tảng **Edge Impulse** sử dụng mạng nơ-ron tích chập (CNN) và triển khai thực tế thông qua **WebAssembly (WASM)**.
-
----
-
-## 📝 Giới thiệu
-Hệ thống có khả năng nhận dạng các từ khóa tiếng Việt thời gian thực với độ trễ thấp và độ chính xác cao trực tiếp trên môi trường máy tính hoặc trình duyệt web.
-
-**Các từ khóa được hỗ trợ:**
-* `BAO_TUYEN` (Từ khóa kích hoạt / Wake-word)
-* `BAT_DAU`
-* `TAM_DUNG`
-* `KET_THUC`
-* `NOISE` (Tập nhiễu môi trường)
-
----
-
-## 🛠️ Công nghệ sử dụng
-* **Nền tảng huấn luyện:** Edge Impulse
-* **Trích xuất đặc trưng:** MFCC (Mel-Frequency Cepstral Coefficients)
-* **Mô hình học máy:** CNN (Convolutional Neural Network)
-* **Định dạng triển khai:** WebAssembly (WASM) & JavaScript độc lập (`standalone`)
-
----
 
 ## 📂 Cấu trúc thư mục dự án
 
-```text
 TRO_LY_HOC_TAP-WASM-V1-IMPULSE-#1
 ├── 📁 browser/                  # Phiên bản chạy trực tiếp trên Trình duyệt Web
 │   ├── edge-impulse-standalone.js    # Thư viện wrapper JavaScript
@@ -43,32 +19,7 @@ TRO_LY_HOC_TAP-WASM-V1-IMPULSE-#1
     ├── edge-impulse-standalone.js
     ├── edge-impulse-standalone.wasm
     └── run-impulse.js                # Script chạy mô hình bằng dòng lệnh Node.js
-## 📝 Giới thiệu
-Hệ thống có khả năng nhận dạng các từ khóa tiếng Việt thời gian thực với độ trễ thấp và độ chính xác cao.
 
-**Các từ khóa được hỗ trợ:**
-* `BAO_TUYEN` (Từ khóa kích hoạt / Wake-word)
-* `BAT_DAU`
-* `TAM_DUNG`
-* `KET_THUC`
-* `NOISE` (Tập nhiễu môi trường)
-
----
-
-## 🛠️ Công nghệ sử dụng
-* **Nền tảng:** Edge Impulse
-* **Trích xuất đặc trưng:** MFCC (Mel-Frequency Cepstral Coefficients)
-* **Mô hình học máy:** CNN (Convolutional Neural Network)
-* **Bài toán:** Audio Classification (Phân loại âm thanh)
-
----
-
-## 💻 Yêu cầu hệ thống
-* Trình duyệt Web hiện đại (Chrome, Edge, Firefox,...)
-* Tài khoản trên nền tảng [Edge Impulse](https://edgeimpulse.com/)
-* Microphone phần cứng hoạt động bình thường.
-
----
 
 ## 🚀 Hướng dẫn cài đặt và chạy dự án
 
@@ -76,8 +27,7 @@ Hệ thống có khả năng nhận dạng các từ khóa tiếng Việt thời
 Đăng nhập vào Edge Impulse và tiến hành tạo một dự án mới (`Create new project`).
 
 ### Bước 2: Thu thập và gán nhãn dữ liệu
-Tạo 5 nhãn dữ liệu tương ứng với các lớp: `BAO_TUYEN`, `BAT_DAU`, `TAM_DUNG`, `KET_THUC`, `NOISE`. 
-*Tải lên hoặc thu âm trực tiếp các tệp âm thanh với thông số chuẩn:*
+Tạo 5 nhãn dữ liệu tương ứng với các lớp: `bao_tuyen`, `bat_dau`, `tam_dung`, `ket_thuc`, `noise`. 
 * **Sampling Rate (Tần số lấy mẫu):** 16000 Hz
 * **Sample Length (Độ dài mẫu):** 1000 ms (1 giây)
 
@@ -104,12 +54,3 @@ Sau khi huấn luyện xong, kiểm tra độ chính xác tổng quan và độ 
 2. Nhấn **Start Sampling** và đọc một trong các từ khóa lệnh.
 3. Hệ thống sẽ trả về xác suất dự đoán (%) của từng lớp theo thời gian thực.
 
----
-
-## 📊 Quy trình hoạt động (Pipeline)
-
-```text
-Audio Input (Microphone) 
-   └──> MFCC Feature Extraction (Trích xuất phổ)
-           └──> CNN Classification (Phân loại mạng tích chập)
-                   └──> Keyword Recognition (Đưa ra từ khóa điều khiển)
