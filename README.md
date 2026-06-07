@@ -7,20 +7,7 @@ Lớp: D23CQCI01-N
 Dự án nhận dạng từ khóa giọng nói phục vụ điều khiển trợ lý học tập bằng giọng nói, được thiết kế và huấn luyện trên nền tảng **Edge Impulse** sử dụng mạng nơ-ron tích chập (CNN) và triển khai thực tế thông qua **WebAssembly (WASM)**.
 
 ## 📂 Cấu trúc thư mục dự án
-
-TRO_LY_HOC_TAP-WASM-V1-IMPULSE-#1
-├── 📁 browser/                  # Phiên bản chạy trực tiếp trên Trình duyệt Web
-│   ├── edge-impulse-standalone.js    # Thư viện wrapper JavaScript
-│   ├── edge-impulse-standalone.wasm  # Mô hình CNN đã biên dịch sang mã máy WASM
-│   ├── index.html                    # Giao diện hiển thị và nhận tín hiệu Micro
-│   └── run-impulse.js                # Script xử lý logic nhận dạng trên trình duyệt
-├── server.py                    # Script Python hỗ trợ khởi chạy Local Web Server
-└── 📁 node/                     # Phiên bản chạy trên môi trường Node.js (Backend)
-    ├── edge-impulse-standalone.js
-    ├── edge-impulse-standalone.wasm
-    └── run-impulse.js                # Script chạy mô hình bằng dòng lệnh Node.js
-
-<img width="495" height="196" alt="image" src="https://github.com/user-attachments/assets/ce764686-103c-4ff3-a00b-1fe4eab9b9a0" />
+<img width="920" height="450" alt="image" src="https://github.com/user-attachments/assets/ce764686-103c-4ff3-a00b-1fe4eab9b9a0" />
 
 ## 🚀 Hướng dẫn cài đặt và chạy dự án
 
