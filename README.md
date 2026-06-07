@@ -20,6 +20,7 @@ TRO_LY_HOC_TAP-WASM-V1-IMPULSE-#1
     ├── edge-impulse-standalone.wasm
     └── run-impulse.js                # Script chạy mô hình bằng dòng lệnh Node.js
 
+<img width="495" height="196" alt="image" src="https://github.com/user-attachments/assets/ce764686-103c-4ff3-a00b-1fe4eab9b9a0" />
 
 ## 🚀 Hướng dẫn cài đặt và chạy dự án
 
