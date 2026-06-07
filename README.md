@@ -7,7 +7,7 @@ Lớp: D23CQCI01-N
 Dự án nhận dạng từ khóa giọng nói phục vụ điều khiển trợ lý học tập bằng giọng nói, được thiết kế và huấn luyện trên nền tảng **Edge Impulse** sử dụng mạng nơ-ron tích chập (CNN) và triển khai thực tế thông qua **WebAssembly (WASM)**.
 
 ## 📂 Cấu trúc thư mục dự án
-<img width="920" height="620" alt="image" src="https://github.com/user-attachments/assets/ce764686-103c-4ff3-a00b-1fe4eab9b9a0" />
+<img width="100%" height="auto" alt="image" src="https://github.com/user-attachments/assets/ce764686-103c-4ff3-a00b-1fe4eab9b9a0" />
 
 ## 🚀 Hướng dẫn cài đặt và chạy dự án
 
